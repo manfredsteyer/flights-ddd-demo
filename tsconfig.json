@@ -15,7 +15,15 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@flights/booking/domain": ["libs/booking/domain/src/index.ts"],
+      "@flights/booking/feature-search": [
+        "libs/booking/feature-search/src/index.ts"
+      ],
+      "@flights/booking/feature-upgrade": [
+        "libs/booking/feature-upgrade/src/index.ts"
+      ]
+    }
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": ["node_modules", "tmp", "**/files"]
 }

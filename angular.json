@@ -123,6 +123,141 @@
           }
         }
       }
+    },
+    "booking-domain": {
+      "projectType": "library",
+      "root": "libs/booking/domain",
+      "sourceRoot": "libs/booking/domain/src",
+      "prefix": "booking",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/booking/domain/tsconfig.lib.json",
+            "project": "libs/booking/domain/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/booking/domain/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/booking/domain/tsconfig.lib.json",
+              "libs/booking/domain/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/booking/domain/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/booking/domain/jest.config.js",
+            "tsConfig": "libs/booking/domain/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/booking/domain/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "booking-feature-search": {
+      "projectType": "library",
+      "root": "libs/booking/feature-search",
+      "sourceRoot": "libs/booking/feature-search/src",
+      "prefix": "booking",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/booking/feature-search/tsconfig.lib.json",
+            "project": "libs/booking/feature-search/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/booking/feature-search/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/booking/feature-search/tsconfig.lib.json",
+              "libs/booking/feature-search/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/booking/feature-search/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/booking/feature-search/jest.config.js",
+            "tsConfig": "libs/booking/feature-search/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/booking/feature-search/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "booking-feature-upgrade": {
+      "projectType": "library",
+      "root": "libs/booking/feature-upgrade",
+      "sourceRoot": "libs/booking/feature-upgrade/src",
+      "prefix": "booking",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/booking/feature-upgrade/tsconfig.lib.json",
+            "project": "libs/booking/feature-upgrade/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/booking/feature-upgrade/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/booking/feature-upgrade/tsconfig.lib.json",
+              "libs/booking/feature-upgrade/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/booking/feature-upgrade/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/booking/feature-upgrade/jest.config.js",
+            "tsConfig": "libs/booking/feature-upgrade/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/booking/feature-upgrade/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {

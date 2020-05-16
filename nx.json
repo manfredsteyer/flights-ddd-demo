@@ -25,6 +25,15 @@
     "flights-app-e2e": {
       "tags": [],
       "implicitDependencies": ["flights-app"]
+    },
+    "booking-domain": {
+      "tags": ["domain:booking", "type:domain-logic"]
+    },
+    "booking-feature-search": {
+      "tags": ["domain:booking", "type:feature"]
+    },
+    "booking-feature-upgrade": {
+      "tags": ["domain:booking", "type:feature"]
     }
   }
 }
